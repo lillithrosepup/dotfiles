@@ -1,0 +1,4 @@
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
+
+source ~/.zshrc_persist
