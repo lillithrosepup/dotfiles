@@ -1,0 +1,36 @@
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: "Comic Code Ligatures"
+    #style: Regular
+
+  # Bold font face
+  bold:
+    family: "Comic Code Ligatures"
+    #style: Bold
+
+  # Italic font face
+  italic:
+    family: "Comic Code Ligatures"
+    #style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: "Comic Code Ligatures"
+    #style: Bold Italic
+
+  # Point size
+  size: 10
+
+  # Offset
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset
+  #glyph_offset:
+  #  x: 0
+  #  y: 0

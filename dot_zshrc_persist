@@ -1,0 +1,14 @@
+# Persistent zshrc
+# This is where my global config goes, because random tools like to add to .zshrc w/o asking
+
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+source ~/.prompt
+source ~/.aliases
