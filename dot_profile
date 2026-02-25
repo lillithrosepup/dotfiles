@@ -1,1 +1,8 @@
-export EDITOR=code
+export EDITOR="code --wait"
+if [ -f ~/.profile.local ]; then
+  source ~/.profile.local
+fi
+
+if [ -f ~/.cargo/env ]; then
+  source ~/.cargo/env
+fi
