@@ -11,4 +11,5 @@ SAVEHIST=10000
 setopt appendhistory
 
 source ~/.prompt
+source ~/.profile
 source ~/.aliases
