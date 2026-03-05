@@ -10,7 +10,11 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-export SSH_AUTH_SOCK=/home/lillith/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+# agent forwarding
+if [[ -z "$SSH_AUTH_SOCK" ]]; then
+  export SSH_AUTH_SOCK=/home/lillith/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+fi
+
 
 source ~/.prompt
 source ~/.profile
