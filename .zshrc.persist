@@ -1,0 +1,51 @@
+# Zsh shit
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[3;5~" kill-word
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt INTERACTIVE_COMMENTS
+
+# Fragmenting
+
+
+YADM_CLASS="$(yadm config local.class)"
+
+if [[ -z $YADM_CLASS ]]; then
+  echo "Warning: yadm class is empty, skipping class-specific config"
+fi
+
+SOURCE_FILES=(
+  ~/.prompt
+  ~/.profile
+  ~/.aliases
+)
+
+
+if [[ $YADM_CLASS == "Desktop" ]]; then
+  SOURCE_FILES+=(
+    ~/.desktoprc
+  )
+fi
+
+POSSIBLE_SUFFIXES=(
+  ".local"
+  ".persist"
+)
+
+for file in "${SOURCE_FILES[@]}"; do
+  if [[ -f "$file" ]]; then
+    source "$file"
+    for suffix in "${POSSIBLE_SUFFIXES[@]}"; do
+      if [[ -f "${file}${suffix}" ]]; then
+        source "${file}${suffix}"
+      fi
+    done
+  else
+    echo "Warning: $file not found, skipping"
+  fi
+done
