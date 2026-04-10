@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+function mkcd () {
+  mkdir -p "$@" && eval cd "\"\$$#\"";
+}
+#alias code="codium"
+
+alias '$'=''
+
+if [ -f "~/.aliases.local" ]; then
+  source ~/.aliases.local
+fi

@@ -1,0 +1,4 @@
+# agent forwarding
+if [[ -z "$SSH_AUTH_SOCK" ]]; then
+  export SSH_AUTH_SOCK=/home/lillith/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+fi

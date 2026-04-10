@@ -1,0 +1,11 @@
+COLOR=75
+if [[ $UID == 0 || $EUID == 0 ]]; then COLOR=125; fi
+
+PROMPT='%F{'"$COLOR"'}● %f%F{'"$COLOR"'}%n%f%F{white}@%f%F{'"$COLOR"'}%m%f'
+
+# if /tmp/promptcmd exists, add its contents to the prompt
+if [[ -f /tmp/promptcmd ]]; then
+    PROMPT+='$(cat /tmp/promptcmd)'
+fi
+
+PROMPT+=': %F{177}%~%f $ '
