@@ -33,6 +33,7 @@ Scope {
 
         delegate: Component {
             PanelWindow {
+                id: panel
                 required property var modelData
 
                 screen: modelData
@@ -82,7 +83,7 @@ Scope {
 
                             Rectangle {
                                 anchors.fill: parent
-                                color: "#1f2430"
+                                color: wsMa.modelData.monitor.name === panel.modelData.name && wsMa.modelData.active ? "#3b4252" : "#1f2430"
                                 border.color: "#3b4252"
                                 border.width: 1
                             }
@@ -105,7 +106,7 @@ Scope {
 
                         Rectangle {
                             anchors.fill: parent
-                            color: "#1f2430"
+                            color: '#0e1117'
                             border.color: "#3b4252"
                             border.width: 1
                         }
