@@ -1,0 +1,1008 @@
+{
+  "action_manifest_version": 0,
+  "app_key": "application.generated.unity.vrchat.exe",
+  "controller_type": "oculus_touch",
+  "name": "VRChat Default Bindings for Meta Touch",
+  "description": "Default Bindings for Meta Touch Controllers.",
+  "bindings": {
+    "/actions/action_menu": {
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/action_menu/in/select"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.25",
+            "click_deactivate_threshold": "0.20"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/action_menu/in/select"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.25",
+            "click_deactivate_threshold": "0.20"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "position": {
+              "output": "/actions/action_menu/in/axis"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "position": {
+              "output": "/actions/action_menu/in/axis"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_grip"
+            },
+            "pull": {
+              "output": "/actions/action_menu/in/gesture_grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/x",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/y",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_grip"
+            },
+            "pull": {
+              "output": "/actions/action_menu/in/gesture_grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_index"
+            },
+            "pull": {
+              "output": "/actions/action_menu/in/gesture_trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/action_menu/in/gesture_activator_index"
+            },
+            "pull": {
+              "output": "/actions/action_menu/in/gesture_trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/action_menu/in/grab"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/action_menu/in/grab"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        }
+      ],
+      "poses": [],
+      "haptics": [],
+      "skeleton": [],
+      "chords": []
+    },
+    "/actions/drone": {
+      "sources": [
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "click": {
+              "output": "/actions/drone/in/take_picture"
+            },
+            "position": {
+              "output": "/actions/drone/in/right_joystick"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "click": {
+              "output": "/actions/drone/in/toggle_fpv"
+            },
+            "position": {
+              "output": "/actions/drone/in/left_joystick"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/drone/in/hold_altitude_mod"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/drone/in/self_leveling_mod"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/drone/in/flip"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/drone/in/respawn"
+            }
+          },
+          "parameters": null
+        }
+      ],
+      "poses": null,
+      "haptics": null,
+      "skeleton": null,
+      "chords": [
+        {
+          "inputs": [
+            [
+              "/user/hand/right/input/trigger",
+              "held"
+            ],
+            [
+              "/user/hand/right/input/a",
+              "single"
+            ]
+          ],
+          "output": "/actions/drone/in/toggle_self_leveling"
+        },
+        {
+          "inputs": [
+            [
+              "/user/hand/left/input/trigger",
+              "held"
+            ],
+            [
+              "/user/hand/right/input/a",
+              "single"
+            ]
+          ],
+          "output": "/actions/drone/in/cycle_flight_preset"
+        }
+      ]
+    },
+    "/actions/global": {
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/interact"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/global/in/trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/stick_click"
+            },
+            "position": {
+              "output": "/actions/global/in/move"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "position": {
+              "output": "/actions/global/in/scroll"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/grab"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/global/in/grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/x",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/mic"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/y",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/udon_menu"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/interact"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/global/in/trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/stick_click"
+            },
+            "position": {
+              "output": "/actions/global/in/rotate"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "position": {
+              "output": "/actions/global/in/scroll"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/Global/in/Gesture_Toggle"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/grab"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/global/in/grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/jump"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/udon_menu"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_grip"
+            },
+            "pull": {
+              "output": "/actions/global/in/gesture_grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/x",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/y",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/menu"
+            },
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_grip"
+            },
+            "pull": {
+              "output": "/actions/global/in/gesture_grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/global/in/menu"
+            },
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_index"
+            },
+            "pull": {
+              "output": "/actions/global/in/gesture_trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/global/in/gesture_activator_index"
+            },
+            "pull": {
+              "output": "/actions/global/in/gesture_trigger_axis"
+            }
+          },
+          "parameters": null
+        }
+      ],
+      "poses": [
+        {
+          "output": "/actions/global/in/pose",
+          "path": "/user/hand/left/pose/raw",
+          "requirement": null
+        },
+        {
+          "output": "/actions/global/in/pose",
+          "path": "/user/hand/right/pose/raw",
+          "requirement": null
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/global/out/haptic",
+          "path": "/user/hand/left/output/haptic",
+          "requirement": null
+        },
+        {
+          "output": "/actions/global/out/haptic",
+          "path": "/user/hand/right/output/haptic",
+          "requirement": null
+        }
+      ],
+      "skeleton": [
+        {
+          "output": "/actions/global/in/skeletonlefthand",
+          "path": "/user/hand/left/input/skeleton/left",
+          "requirement": null
+        },
+        {
+          "output": "/actions/global/in/skeletonrighthand",
+          "path": "/user/hand/right/input/skeleton/right",
+          "requirement": null
+        }
+      ],
+      "chords": [
+        {
+          "inputs": [
+            [
+              "/user/hand/left/input/trigger",
+              "click"
+            ],
+            [
+              "/user/hand/right/input/trigger",
+              "click"
+            ],
+            [
+              "/user/hand/left/input/y",
+              "held"
+            ],
+            [
+              "/user/hand/right/input/b",
+              "held"
+            ]
+          ],
+          "output": "/actions/global/in/safe_mode"
+        }
+      ]
+    },
+    "/actions/menu": {
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/menu/in/confirm"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/menu/in/confirm"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "position": {
+              "output": "/actions/menu/in/scroll"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "position": {
+              "output": "/actions/menu/in/scroll"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/menu/in/drag"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/menu/in/drag"
+            }
+          },
+          "parameters": null
+        }
+      ],
+      "poses": [],
+      "haptics": [],
+      "skeleton": [],
+      "chords": []
+    },
+    "/actions/one_hand": {
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/one_hand/in/interact"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/one_hand/in/interact"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/one_hand/in/trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/one_hand/in/trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "click": {
+              "output": "/actions/one_hand/in/stick_click"
+            },
+            "position": {
+              "output": "/actions/one_hand/in/move_rotate"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "click": {
+              "output": "/actions/one_hand/in/stick_click"
+            },
+            "position": {
+              "output": "/actions/one_hand/in/move_rotate"
+            }
+          },
+          "parameters": {
+            "deadzone_pct": "70"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/one_hand/in/grab"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "inputs": {
+            "click": {
+              "output": "/actions/one_hand/in/grab"
+            }
+          },
+          "parameters": {
+            "click_activate_threshold": "0.7",
+            "click_deactivate_threshold": "0.55"
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/one_hand/in/grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "pull": {
+              "output": "/actions/one_hand/in/grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_grip"
+            },
+            "pull": {
+              "output": "/actions/one_hand/in/gesture_grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/x",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/y",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_grip"
+            },
+            "pull": {
+              "output": "/actions/one_hand/in/gesture_grip_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_thumb"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_index"
+            },
+            "pull": {
+              "output": "/actions/one_hand/in/gesture_trigger_axis"
+            }
+          },
+          "parameters": null
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "inputs": {
+            "touch": {
+              "output": "/actions/one_hand/in/gesture_activator_index"
+            },
+            "pull": {
+              "output": "/actions/one_hand/in/gesture_trigger_axis"
+            }
+          },
+          "parameters": null
+        }
+      ],
+      "poses": [],
+      "haptics": [],
+      "skeleton": [],
+      "chords": []
+    }
+  },
+  "category": "steamvr_input",
+  "alias_info": {},
+  "options": {},
+  "simulated_actions": [],
+  "interaction_profile": ""
+}

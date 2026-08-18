@@ -7,6 +7,7 @@ hl.bind(export.mainMod .. " + D", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(export.mainMod .. " + L", hl.dsp.exec_cmd("qs ipc call memes toggle"))
 
 export.taskMgrBind = "CTRL + SHIFT + ESCAPE"
+export.renameWorkspaceBind = export.mainMod .. " + SHIFT + F"
 
 hl.bind("insert", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(export.mainMod .. " + ALT + C", hl.dsp.exec_cmd("hyprpicker -a -f hex"))
