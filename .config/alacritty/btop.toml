@@ -1,0 +1,9 @@
+[general]
+import = ["./alacritty.toml"]
+[window]
+opacity = 0.5
+title = "BTOP"
+dynamic_title = true
+class = { instance = "btop", general = "btop" }
+[terminal]
+shell = "/usr/sbin/btop"

@@ -1,0 +1,7 @@
+require("lillith.monitors")
+require("lillith.autostart")
+require("lillith.taskMgr")
+require("lillith.env")
+require("lillith.binds")
+require("lillith.permissions")
+require("lillith.misc")
