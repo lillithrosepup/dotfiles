@@ -32,7 +32,7 @@ Scope {
         model: Quickshell.screens
 
         delegate: Component {
-            PanelWindow {
+            PanelWindow { // qmllint disable uncreatable-type
                 id: panel
                 required property var modelData
 
@@ -73,7 +73,7 @@ Scope {
 
                         MouseArea {
                             id: wsMa
-                            width: 24
+                            width: Math.max(wsText.width + 12, 24)
                             height: 24
 
                             required property HyprlandWorkspace modelData
@@ -89,6 +89,7 @@ Scope {
                             }
 
                             Text {
+                                id: wsText
                                 text: wsMa.modelData.name
                                 color: "white"
                                 anchors.verticalCenter: parent.verticalCenter
@@ -98,10 +99,15 @@ Scope {
                     }
 
                     MouseArea {
-                        width: 24
+                        id: nextMa
+                        width: Math.max(nextText.width + 12, 24)
                         height: 24
 
-                        onClicked: Hyprland.dispatch('hl.dsp.focus({ workspace = "' + (Math.max(...Hyprland.workspaces.values.map(i => Number.parseInt(i.name))) + 1) + '"})')
+                        function getMaxWorkspace() {
+                            return Math.max(...Hyprland.workspaces.values.map(i => i.id));
+                        }
+
+                        onClicked: Hyprland.dispatch('hl.dsp.focus({ workspace = "' + (getMaxWorkspace() + 1) + '"})')
                         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
                         Rectangle {
@@ -112,7 +118,8 @@ Scope {
                         }
 
                         Text {
-                            text: Math.max(...Hyprland.workspaces.values.map(i => Number.parseInt(i.name))) + 1
+                            id: nextText
+                            text: nextMa.getMaxWorkspace() + 1
                             color: "white"
                             anchors.verticalCenter: parent.verticalCenter
                             anchors.horizontalCenter: parent.horizontalCenter
