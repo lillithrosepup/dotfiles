@@ -8,3 +8,19 @@ hl.window_rule(
     center = true
   }
 )
+
+hl.window_rule(
+  {
+    name = "tracker-software",
+    match = {class = "(slimevr)|(SlimeTora)"},
+    workspace = "name:Trackers"
+  }
+)
+
+hl.window_rule(
+  {
+    name = "vr-application",
+    match = {class = "(io.github.wivrn.wivrn)|(steam_app_438100)"},
+    workspace = "name:VR Software"
+  }
+)
