@@ -9,3 +9,4 @@ hl.config(
 
 hl.permission({binary = "/usr/sbin/grim", type = "screencopy", mode = "allow"})
 hl.permission({binary = "/usr/lib/xdg-desktop-portal-hyprland", type = "screencopy", mode = "allow"})
+hl.permission({binary = "/usr/sbin/wayvr", type = "screencopy", mode = "allow"})

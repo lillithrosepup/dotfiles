@@ -8,6 +8,7 @@ return {
   commands = {
     "flatpak run --user com.discordapp.Discord",
     "env APPIMAGELAUNCHER_DISABLE=1 astra",
-    "alacritty"
+    "alacritty",
+    "/home/lillith/Applications/VRCX.AppImage --startup"
   }
 }

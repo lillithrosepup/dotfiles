@@ -4,6 +4,6 @@ import = ["./alacritty.toml"]
 opacity = 0.5
 title = "BTOP"
 dynamic_title = true
-class = { instance = "btop", general = "btop" }
+class = { instance = "taskmgr", general = "taskmgr" }
 [terminal]
 shell = "/usr/sbin/btop"
