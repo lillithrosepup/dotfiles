@@ -24,3 +24,11 @@ hl.window_rule(
     workspace = "name:VR Software"
   }
 )
+
+hl.window_rule(
+  {
+    name = "no-screen-share",
+    match = {class = "(bitwarden)|(org.signal.Signal)|(org.telegram.desktop)"},
+    no_screen_share = true
+  }
+)
