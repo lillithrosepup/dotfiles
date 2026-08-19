@@ -5,7 +5,7 @@ export.mainMod = "SUPER"
 -- hl.bind("ALT + Tab", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
 hl.bind(export.mainMod .. " + D", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(export.mainMod .. " + L", hl.dsp.exec_cmd("qs ipc call memes toggle"))
-
+hl.bind(export.mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("cliphist list | wofi --dmenu | cliphist decode | wl-copy"))
 export.taskMgrBind = "CTRL + SHIFT + ESCAPE"
 export.renameWorkspaceBind = export.mainMod .. " + SHIFT + F"
 

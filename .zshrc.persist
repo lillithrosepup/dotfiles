@@ -13,11 +13,6 @@ setopt INTERACTIVE_COMMENTS
 # Fragmenting
 
 
-YADM_CLASS="$(yadm config local.class)"
-
-if [[ -z $YADM_CLASS ]]; then
-  echo "Warning: yadm class is empty, skipping class-specific config"
-fi
 
 SOURCE_FILES=(
   ~/.prompt
@@ -25,12 +20,6 @@ SOURCE_FILES=(
   ~/.aliases
 )
 
-
-if [[ $YADM_CLASS == "Desktop" ]]; then
-  SOURCE_FILES+=(
-    ~/.desktoprc
-  )
-fi
 
 POSSIBLE_SUFFIXES=(
   ".local"
