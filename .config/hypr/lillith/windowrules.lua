@@ -11,6 +11,15 @@ hl.window_rule(
 
 hl.window_rule(
   {
+    name = "bitwarden-extension-float",
+    match = {initial_title = "_crx_nngceckbapebfimnlniiiahkandclblb"},
+    float = true,
+    center = true
+  }
+)
+
+hl.window_rule(
+  {
     name = "tracker-software",
     match = {class = "(slimevr)|(SlimeTora)"},
     workspace = "name:Trackers"
@@ -20,7 +29,7 @@ hl.window_rule(
 hl.window_rule(
   {
     name = "vr-application",
-    match = {class = "(io.github.wivrn.wivrn)|(steam_app_438100)"},
+    match = {class = "(io.github.wivrn.wivrn)|(steam_app_438100)|(org.abyssalfragments.apisidecar)"},
     workspace = "name:VR Software"
   }
 )
@@ -30,5 +39,14 @@ hl.window_rule(
     name = "no-screen-share",
     match = {class = "(bitwarden)|(org.signal.Signal)|(org.telegram.desktop)"},
     no_screen_share = true
+  }
+)
+
+hl.window_rule(
+  {
+    name = "eeviz-fs",
+    match = {class = "eeviz"},
+    fullscreen = true,
+    workspace = "name:Edens End Viz"
   }
 )

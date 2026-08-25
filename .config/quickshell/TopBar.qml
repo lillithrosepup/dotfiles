@@ -1,5 +1,6 @@
 pragma ComponentBehavior: Bound
 import QtQuick
+import QtQuick.Layouts
 import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Services.Mpris
@@ -10,7 +11,7 @@ import Quickshell.WindowManager
 Scope {
     id: root
 
-    property var curDate: new Date()
+    property date curDate: new Date()
     property string nowPlaying: ""
 
     Timer {
@@ -20,7 +21,7 @@ Scope {
         triggeredOnStart: true
         onTriggered: {
             root.curDate = new Date();
-            var mPlayer = Mpris.players.values[0];
+            var mPlayer = Mpris.players.values.find(i => ["astra", "spotify"].includes(i.identity.toLowerCase()));
             if (mPlayer?.trackTitle) {
                 root.nowPlaying = `${mPlayer.trackTitle} - ${mPlayer.trackArtist || "Unknown"}`;
             } else
@@ -153,8 +154,8 @@ Scope {
                     spacing: 6
 
                     anchors {
-                        right: timeUTC.left
-                        verticalCenter: timeUTC.verticalCenter
+                        right: clocks.left
+                        verticalCenter: clocks.verticalCenter
                         rightMargin: 12
                     }
 
@@ -211,32 +212,58 @@ Scope {
                     }
                 }
 
-                // RST
-                Text {
-                    id: timeUTC
-
-                    text: root.curDate.getUTCHours() % 12 + ":" + String(root.curDate.getUTCMinutes()).padStart(2, "0") + " " + (root.curDate.getUTCHours() >= 12 ? "PM" : "AM") + " RST (Rose Std. Time)"
-                    color: "white"
-                    font.pixelSize: 12
-
-                    anchors {
-                        right: timeEST.left
-                        verticalCenter: timeEST.verticalCenter
-                        rightMargin: 12
-                    }
-                }
-
-                Text {
-                    id: timeEST
-
-                    text: root.curDate.getHours() % 12 + ":" + String(root.curDate.getMinutes()).padStart(2, "0") + " " + (root.curDate.getHours() >= 12 ? "PM" : "AM")
-                    color: "white"
-                    font.pixelSize: 12
+                GridLayout {
+                    id: clocks
+                    flow: GridLayout.LeftToRight
 
                     anchors {
                         right: parent.right
                         verticalCenter: parent.verticalCenter
                         rightMargin: 12
+                    }
+
+                    Repeater {
+                        model: [
+                            { // s & g
+                                offset: 2,
+                                color: "#335533",
+                                shortId: "b"
+                            },
+                            { // r
+                                offset: 0,
+                                color: "#ff5577",
+                                shortId: "r"
+                            } // local
+                            ,
+                            {
+                                offset: -4,
+                                shortId: ""
+                            },
+                        ]
+
+                        Text {
+                            required property var modelData
+
+                            color: modelData.color ?? "white"
+                            font.pixelSize: 12
+
+                            function formatTime(date, offset, shortId) {
+                                var d = new Date(date.getTime() + offset * 3600000);
+
+                                var hours = d.getUTCHours();
+                                var minutes = d.getUTCMinutes();
+
+                                var ampm = hours >= 12 ? "PM" : "AM";
+
+                                hours %= 12;
+                                if (hours === 0)
+                                    hours = 12;
+
+                                return hours + ":" + String(minutes).padStart(2, "0") + " " + shortId + ampm;
+                            }
+
+                            text: formatTime(root.curDate, modelData.offset, modelData.shortId)
+                        }
                     }
                 }
             }

@@ -8,11 +8,13 @@ local function runAutostart(dry)
   for _, file in pairs(files) do
     if file["commands"] then
       for _, command in pairs(file.commands) do
-        if dry then
-          print("autostart: dryrunning " .. command)
-        else
-          print("autostart: running: " .. command)
-          hl.exec_cmd(command)
+        if command ~= nil then
+          if dry then
+            print("autostart: dryrunning " .. command)
+          else
+            print("autostart: running: " .. command)
+            hl.exec_cmd(command)
+          end
         end
       end
     end

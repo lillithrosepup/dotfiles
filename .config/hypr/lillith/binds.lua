@@ -9,7 +9,10 @@ hl.bind(export.mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("cliphist list | wofi 
 export.taskMgrBind = "CTRL + SHIFT + ESCAPE"
 export.renameWorkspaceBind = export.mainMod .. " + SHIFT + F"
 
-hl.bind("insert", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind("insert", hl.dsp.exec_cmd("hyprshot -m region -z"))
+hl.bind("end", hl.dsp.exec_cmd("hyprshot -m region")) -- screenshot with no freeze
+-- hl.bind("pgdn", hl.dsp.exec_cmd("hyprshot -m window -z")) -- window
+hl.bind("pause", hl.dsp.exec_cmd("hyprshot -m window -z")) -- window w no pause
 hl.bind(export.mainMod .. " + ALT + C", hl.dsp.exec_cmd("hyprpicker -a -f hex"))
 
 hl.bind(export.mainMod .. " + Q", hl.dsp.exec_cmd("alacritty"))
@@ -74,7 +77,47 @@ hl.bind(
 
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), {locked = true})
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), {locked = true})
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), {locked = true})
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), {locked = true})
+
+-- old
+-- hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), {locked = true})
+
+-- new, fixes my fucked up headphones
+---@type integer
+local press_count = 0
+
+---@type HL.Timer?
+local click_timer = nil
+---@return nil
+local function media_button()
+  press_count = press_count + 1
+
+  if click_timer ~= nil then
+    click_timer:set_enabled(false)
+  end
+
+  click_timer =
+    hl.timer(
+    ---@return nil
+    function()
+      if press_count == 1 then
+        hl.exec_cmd("playerctl play-pause")
+      elseif press_count == 2 then
+        hl.exec_cmd("playerctl next")
+      elseif press_count == 3 then
+        hl.exec_cmd("playerctl previous")
+      end
+
+      press_count = 0
+      click_timer = nil
+    end,
+    {
+      timeout = 350,
+      type = "oneshot"
+    }
+  )
+end
+
+hl.bind("XF86AudioPlay", media_button)
 
 return export

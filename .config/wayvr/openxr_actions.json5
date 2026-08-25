@@ -50,8 +50,7 @@
       "right": "/user/hand/right/input/b/touch"
     },
     "click_modifier_middle": {
-      "left": "/user/hand/left/input/x/touch",
-      "right": "/user/hand/right/input/a/touch"
+      "left": "/user/hand/left/input/x/touch"
     },
     "move_mouse": {
       "left": "/user/hand/left/input/trigger/touch",

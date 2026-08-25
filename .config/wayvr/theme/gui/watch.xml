@@ -121,7 +121,7 @@
     <Button id="btn_slimevr_generic_${cmd}" macro="button_style"
       _press="::ShellExec solarxr-cli ${cmd}" tooltip_str="${tooltip}"
       tooltip_side="top">
-      <sprite color="~color_text" width="38" height="38"
+      <sprite color="~color_text" width="40" height="40"
         src="$HOME/.config/wayvr/theme/assets/slime-${icon}.svg" />
     </Button>
   </template>
