@@ -1,0 +1,152 @@
+{
+  "ui_animation_speed": 1.0,
+  "ui_round_multiplier": 1.0,
+  "ui_gradient_intensity": 0.3,
+  "click_freeze_time_ms": 300,
+  "invert_scroll_direction_x": false,
+  "invert_scroll_direction_y": false,
+  "scroll_speed": 1.0,
+  "long_press_duration": 1.0,
+  "notifications_enabled": true,
+  "notifications_sound_enabled": true,
+  "keyboard_sound_enabled": true,
+  "upright_screen_fix": false,
+  "double_cursor_fix": false,
+  "enable_watch": true,
+  "sets_on_watch": false,
+  "hide_grab_help": false,
+  "allow_sliding": true,
+  "focus_follows_mouse_mode": false,
+  "left_handed_mouse": false,
+  "block_game_input": true,
+  "block_game_input_ignore_watch": true,
+  "block_poses_on_kbd_interaction": true,
+  "space_drag_multiplier": 5.0,
+  "watch_view_angle_min": 0.5,
+  "watch_view_angle_max": 0.70000005,
+  "use_skybox": false,
+  "skybox_texture": "",
+  "grid_opacity": 1.0,
+  "use_passthrough": true,
+  "screen_render_down": false,
+  "pointer_lerp_factor": 0.3,
+  "space_drag_unlocked": true,
+  "space_drag_affects_world": false,
+  "space_gravity_damping": 1.0,
+  "space_gravity_enabled": false,
+  "space_gravity_fling_strength": 1.0,
+  "space_gravity_gravity": 1.0,
+  "space_gravity_ground_friction": 1.0,
+  "space_gravity_floor_height": 0.0,
+  "space_rotate_unlocked": false,
+  "clock_12h": true,
+  "hide_username": false,
+  "opaque_background": false,
+  "xwayland_by_default": false,
+  "context_menu_hold_and_release": false,
+  "capture_method": "Auto",
+  "keyboard_middle_click_mode": "None",
+  "autostart_apps": [
+    {
+      "name": "OpenShock Desktop",
+      "exec": "env",
+      "env": [
+        "QT_QPA_PLATFORM=wayland",
+        "GDK_BACKEND=wayland",
+        "SDL_VIDEODRIVER=wayland",
+        "XDG_SESSION_TYPE=wayland",
+        "ELECTRON_OZONE_PLATFORM_HINT=wayland"
+      ],
+      "args": "APPIMAGELAUNCHER_DISABLE=1 /home/lillith/Applications/OpenShock_Desktop-x86_64_e6e172ca01d961926974d32353266638.AppImage",
+      "icon": "/home/lillith/.local/share/icons/hicolor/512x512/apps/openshock-desktop.png",
+      "resolution": [
+        854,
+        480
+      ],
+      "pos_mode": "Anchor",
+      "userdata": {
+        "desktop-entry": "{\"exec_path\":\"env\",\"exec_args\":\"APPIMAGELAUNCHER_DISABLE=1 /home/lillith/Applications/OpenShock_Desktop-x86_64_e6e172ca01d961926974d32353266638.AppImage\",\"app_id\":\"OpenShock.Desktop\",\"app_name\":\"OpenShock Desktop\",\"icon_path\":\"/home/lillith/.local/share/icons/hicolor/512x512/apps/openshock-desktop.png\",\"categories\":[\"Utility\",\"Network\",\"\"]}"
+      }
+    }
+  ],
+  "pinned_apps": [
+    {
+      "app_id": "chrome-lodlkdfmihgonocnmddehnfgiljnadcf-Default",
+      "compositor_mode": "Native",
+      "pos_mode": "Anchored",
+      "orientation_mode": "Tall",
+      "res_mode": "Res1080"
+    },
+    {
+      "app_id": "chrome-bmknhnfffdndineahldekcfkmeeilljm-Default",
+      "compositor_mode": "Native",
+      "pos_mode": "Anchored",
+      "orientation_mode": "Wide",
+      "res_mode": "Res1080"
+    },
+    {
+      "app_id": "prism",
+      "compositor_mode": "Native",
+      "pos_mode": "Anchored",
+      "orientation_mode": "Wide",
+      "res_mode": "Res1080"
+    },
+    {
+      "app_id": "astra",
+      "compositor_mode": "Native",
+      "pos_mode": "Anchored",
+      "orientation_mode": "Wide",
+      "res_mode": "Res1080"
+    },
+    {
+      "app_id": "com.discordapp.Discord",
+      "compositor_mode": "Native",
+      "pos_mode": "Anchored",
+      "orientation_mode": "Wide",
+      "res_mode": "Res1080"
+    },
+    {
+      "app_id": "OpenShock.Desktop",
+      "compositor_mode": "Native",
+      "pos_mode": "Anchored",
+      "orientation_mode": "Wide",
+      "res_mode": "Res480"
+    },
+    {
+      "app_id": "spotify",
+      "compositor_mode": "Native",
+      "pos_mode": "Anchored",
+      "orientation_mode": "Wide",
+      "res_mode": "Res1080"
+    }
+  ],
+  "handsfree_pointer": "Hmd",
+  "handsfree_alt_tab": "Hmd",
+  "language": null,
+  "chroma_key_params": {
+    "hsv_min": [
+      0.33333334,
+      1.0,
+      1.0
+    ],
+    "hsv_max": [
+      0.33333334,
+      1.0,
+      1.0
+    ],
+    "curve": 0.0,
+    "despill": 0.0
+  },
+  "input_emulation_method": "Uinput",
+  "tutorial_graduated": true,
+  "whisper_model": "ggml-large-v3-turbo-q5_0.bin",
+  "default_overlay_scale": 1.0,
+  "color_palette": "lillith.json",
+  "snap_angle_deg": 0.0,
+  "wvr_mouse_acceleration": true,
+  "wvr_mouse_speed": 0.0,
+  "wvr_input_capture": "None",
+  "default_curvature": 0.1,
+  "default_opacity": 1.0,
+  "default_positioning": "Anchored"
+}
