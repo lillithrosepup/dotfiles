@@ -224,17 +224,21 @@ Scope {
 
                     Repeater {
                         model: [
-                            { // s & g
+                            {
                                 offset: 2,
                                 color: "#335533",
                                 shortId: "b"
                             },
-                            { // r
+                            {
+                                offset: 1,
+                                color: '#b055ff',
+                                shortId: "ru"
+                            },
+                            {
                                 offset: 0,
                                 color: "#ff5577",
-                                shortId: "r"
-                            } // local
-                            ,
+                                shortId: "ro"
+                            },
                             {
                                 offset: -4,
                                 shortId: ""
