@@ -49,8 +49,8 @@ Scope {
 
                 Rectangle {
                     anchors.fill: parent
-                    color: "#1f2430"
-                    border.color: "#3b4252"
+                    color: "#2d212d"
+                    border.color: "#211921"
                     border.width: 1
                 }
 
@@ -84,8 +84,8 @@ Scope {
 
                             Rectangle {
                                 anchors.fill: parent
-                                color: wsMa.modelData.monitor.name === panel.modelData.name && wsMa.modelData.active ? "#3b4252" : "#1f2430"
-                                border.color: "#3b4252"
+                                color: wsMa.modelData.monitor.name === panel.modelData.name && wsMa.modelData.active ? "#241a24" : "#3c2c3c"
+                                border.color: "#211921"
                                 border.width: 1
                             }
 
@@ -113,8 +113,8 @@ Scope {
 
                         Rectangle {
                             anchors.fill: parent
-                            color: '#0e1117'
-                            border.color: "#3b4252"
+                            color: '#3c2c3c'
+                            border.color: "#211921"
                             border.width: 1
                         }
 
