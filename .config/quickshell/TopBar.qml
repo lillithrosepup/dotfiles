@@ -70,7 +70,7 @@ Scope {
                     }
 
                     Repeater {
-                        model: Hyprland.workspaces.values
+                        model: Hyprland.workspaces.values.filter(ws => ws.monitor.name === panel.modelData.name)
 
                         MouseArea {
                             id: wsMa
